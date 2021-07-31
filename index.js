@@ -4,7 +4,10 @@ const key = '8101ac37658242a4b1cf6cef9d013036';
 Http.setRequestHeader("Ocp-Apim-Subscription-Key",key);
 Http.open("GET", url);
 Http.send();
-
+console.log('Hello');
+function showResult(){
+    document.getElementById('result').innerHTML = "Test";
+}
 Http.onreadystatechange = (e) => {
-  document.getElementById('result').innerHTML = Http.responseText;
+    document.getElementById('result').innerHTML = Http.responseText;
 }
